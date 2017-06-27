@@ -1,0 +1,34 @@
+jQuery(document).ready(function()
+{
+    // ---------------------------------------------------------
+	// Back to Top
+	// ---------------------------------------------------------
+	jQuery(window).scroll(function () {
+		if (jQuery(this).scrollTop() > 100) {
+			jQuery('#back-top').addClass('show-totop');
+		} else {
+			jQuery('#back-top').removeClass('show-totop');
+		}
+	});
+	jQuery('#back-top a').click(function () {
+		jQuery('body,html').stop(false, false).animate({
+			scrollTop: 0
+		}, 800);
+		return false;
+	});
+	
+	jQuery('.custom-news-title').find('h2').wrapInner('<span class="custom-news-wrap"><span />');
+	
+	jQuery('.custom-title-style').find('h2').wrapInner('<span class="custom-title-style-wrapp"><span />');
+	
+	jQuery('.custom-news-title').find('h3').wrapInner('<span class="custom-news-wrap"><span />');
+	
+	jQuery('.custom-photo-gallery-header').find('h2').wrapInner('<span class="custom-photo-gallery-wrapp">');
+	
+	jQuery('.comments').find('h3.comments-title').wrapInner('<span class="custom-comments-wrapp"><span />');
+	
+	jQuery('.comments').find('.custom-comments-wrapp').wrapInner('<span class="custom-sp"><span />');
+	
+	jQuery('.testimonials-img-wrapper').find('.post-thumbnail_link').wrapInner('<span class="thumbnail_link-wrapper">');
+	
+})
